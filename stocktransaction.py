@@ -34,9 +34,6 @@
 #
 # ==============================================================================
 
-# ------------------------------------------------------------------------------
-# TODO
-# ------------------------------------------------------------------------------
 
 
 # ------------------------------------------------------------------------------
@@ -55,27 +52,25 @@ AmtPaidPerShare = 0.0
 
 CommissionPercentage = 0.0
 
+PaidWithoutCommission = 0.0
+
+CommissionPaid = 0.0
+
+TotalPaid = 0.0
+
 SharesSold = 0.0
 
 AmtSoldPerShare = 0.0
 
 SaleAmount = 0.0
 
-PaidWithoutCommission = AmtPaidPerShare * SharesPurchased
+EarnedWithoutCommission = 0.0
 
-CommissionPaid = PaidWithoutCommission * CommissionPercentage
+CommissionPaidSale = 0.0
 
-TotalPaid = CommissionPaid + PaidWithoutCommission
+TotalEarned = 0.0
 
-EarnedWithoutCommission = AmtSoldPerShare * SharesSold
-
-CommissionPaidSale = EarnedWithoutCommission * CommissionPercentage
-
-TotalEarned = EarnedWithoutCommission - CommissionPaidSale
-
-ProfitNoProfit = TotalEarned - TotalPaid
-
-
+ProfitNoProfit = 0.0
 
 # ------------------------------------------------------------------------------
 # Calculations
@@ -90,12 +85,25 @@ AmtPaidPerShare = float(input("How much did you pay per share? \n"
 CommissionPercentage = float(input("What percentage is your stockbroker \n"
 "Charging per transaction? enter in 0.00 form: "))
 
+PaidWithoutCommission = AmtPaidPerShare * SharesPurchased
+
+CommissionPaid = PaidWithoutCommission * CommissionPercentage
+
+TotalPaid = CommissionPaid + PaidWithoutCommission
+
 SharesSold = float(input("How many shares did you sell? \n "
 "enter in 0.0 form: "))
 
 AmtSoldPerShare = float(input("How much did you sell each share for? \n"
 "enter in 0.0 form: "))
 
+EarnedWithoutCommission = AmtSoldPerShare * SharesSold
+
+CommissionPaidSale = EarnedWithoutCommission * CommissionPercentage
+
+TotalEarned = EarnedWithoutCommission - CommissionPaidSale
+
+ProfitNoProfit = TotalEarned - TotalPaid
 # ------------------------------------------------------------------------------
 # Output
 # ------------------------------------------------------------------------------
