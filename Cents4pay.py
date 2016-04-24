@@ -58,7 +58,7 @@ totalearnings = 0
 
 
 # ------------------------------------------------------------------------------
-#
+# Operations
 # ------------------------------------------------------------------------------
 
 
@@ -67,7 +67,6 @@ daystowork = float(input("How many days would you like to work?: "))
 counter += 1
 
 print "On day %s" % day
-#print "Your earnings are %s" % earnings
 print "Your earnings are: "'${:,.2f}'.format(earnings)
 
 
@@ -76,7 +75,6 @@ day = counter
 earnings = salary
 
 print "On day %s" % day
-#print "Your earnings are %s" % earnings
 print "Your earnings are: "'${:,.2f}'.format(earnings)
 
 
@@ -86,12 +84,10 @@ while counter != daystowork:
     earnings = earnings * 2.0
 
     print "On day %s" % day
-#    print "Your earnings are %s" % earnings
     print "Your earnings are: "'${:,.2f}'.format(earnings)
 
     totalearnings = totalearnings + earnings
 
-#print "Your total is %s" %totalearnings
 print "Your total is: "'${:,.2f}'.format(totalearnings)
 
 
