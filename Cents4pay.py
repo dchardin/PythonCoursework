@@ -66,11 +66,6 @@ totalearnings = 0
 
 daystowork = float(input("How many days would you like to work?: "))
 
-
-print "On day %s" % day
-print "Your earnings are: "'${:,.2f}'.format(earnings)
-
-
 counter += 1
 day = counter
 
